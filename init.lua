@@ -41,9 +41,19 @@ keys.ms = function ()
 end
 
 keys.cg = function () textadept.editing.show_documentation() end
+keys.cc = function () buffer:cancel() end
+
 
 keys.cx = function ()
 	if #_BUFFERS == 1 then
+		buffer:close()
+		quit()
+		return
+	end
+
+	buffer:close()
+end
+		--[[
 		local choice = ui.dialogs.yesno_msgbox{
 			string_output = true,
 			text = "Close Textadept?",
@@ -57,9 +67,7 @@ keys.cx = function ()
 			return
 		end
 	end
-
-	buffer:close()
-end
+	--]]
 
 keys["m,"] = function () view:goto_buffer(-1) end
 keys["m."] = function () view:goto_buffer(1) end
