@@ -1,0 +1,2 @@
+-- Right now this file is empty, and will very likely stay so, unless I have
+-- a pressing reason to use Textadept's terminal version.
