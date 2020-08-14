@@ -1,11 +1,13 @@
-if not CURSES then
-	buffer:set_theme("sand", {font="Monospace", fontsize=15})
-	return
-end
-
 require "buffer_preferences"
 require "ta_as_commit_editor"
 
+if not CURSES then
+	view:set_theme("light", {font="Iosevka Fixed Slab", size=20})
+	return
+end
+
+
+--[=[
 buffer:set_theme("term")
 
 local function alert (header, ...)
@@ -108,3 +110,4 @@ keys.ma = function () buffer.selection_mode = 0 end
 	cw,l - quick search lua pattern
 	.q.. - like above, but backwards
 ]]
+--]=]
