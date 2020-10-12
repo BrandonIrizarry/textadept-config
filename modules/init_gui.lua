@@ -1,4 +1,4 @@
-view:set_theme("light", {font="Iosevka Fixed Slab", size=20})
+view:set_theme("light", {font="Iosevka Fixed Slab", size=18})
 
 -- Open a terminal where the current buffer's file resides.
 keys["ctrl+t"] = function ()
